@@ -1,0 +1,37 @@
+[
+  {
+    "name": "fish",
+    "warehouses": [
+      {
+        "warehouseName": "A",
+        "count": 10
+      }
+    ]
+  },
+  {
+    "name": "milk",
+    "warehouses": [
+      {
+        "warehouseName": "A",
+        "count": 2
+      },
+      {
+        "warehouseName": "B",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "name": "flowers",
+    "warehouses": [
+      {
+        "warehouseName": "C",
+        "count": 20
+      },
+      {
+        "warehouseName": "UNSORTED",
+        "count": 5
+      }
+    ]
+  }
+]
