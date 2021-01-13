@@ -21,6 +21,7 @@ import Box from '@material-ui/core/Box';
 
 import PageTitle from './page-title';
 import Table from './table';
+import { Link } from "react-router-dom";
 
 const drawerWidth = 240;
 
@@ -136,19 +137,30 @@ export default function HeaderAndSidebar(props) {
         </div>
         <Divider />
         <List>
-          {['Продукты', 'Склады'].map((text, index) => (
-            <ListItem
-              button
-              key={text}
-              onClick={() => (index % 2 === 0)
-                ? setTitle(<PageTitle titleText="Продукция" />)
-                : setTitle(<PageTitle titleText="Склады" />)
-              }
-            >
-              <ListItemIcon>{index % 2 === 0 ? <AssignmentIcon /> : <BusinessIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
+          {['Продукты', 'Склады'].map((text, index) => {
+            return (index % 2 === 0)
+              ? (
+                <Link to="/" style={{ color: 'black', textDecoration: 'none' }}>
+                  <ListItem
+                    button
+                    key={text}
+                  >
+                    <ListItemIcon><AssignmentIcon /></ListItemIcon>
+                    <ListItemText primary={text} />
+                  </ListItem>
+                </Link>
+              ) : (
+                <Link to="/warehouses" style={{ color: 'black', textDecoration: 'none' }}>
+                  <ListItem
+                    button
+                    key={text}
+                  >
+                    <ListItemIcon><BusinessIcon /></ListItemIcon>
+                    <ListItemText primary={text} />
+                  </ListItem>
+                </Link>
+              )
+          })}
         </List>
       </Drawer>
       <main
