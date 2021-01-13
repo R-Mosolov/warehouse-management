@@ -7,27 +7,17 @@ import {
 } from "react-router-dom";
 // import HeaderAndSidebar from './components/header-and-sidebar';
 import Products from './pages/products';
+import Warehouses from "./pages/warehouses";
 
 function App() {
   return (
     <Router>
       <div>
-        {/* <nav>
-          <ul>
-            <li>
-              <Link to="/">Продукты</Link>
-            </li>
-            <li>
-              <Link to="/warehouses">Склады</Link>
-            </li>
-          </ul>
-        </nav> */}
-
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
           <Route path="/warehouses">
-            <Products />
+            <Warehouses />
           </Route>
           <Route path="/">
             <Products />
@@ -37,9 +27,5 @@ function App() {
     </Router>
   );
 }
-
-// function Products() {
-//   return <h2>Home</h2>;
-// }
 
 export default App;

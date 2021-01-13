@@ -20,7 +20,7 @@ import BusinessIcon from '@material-ui/icons/Business';
 import Box from '@material-ui/core/Box';
 
 import PageTitle from './page-title';
-import Table from './table';
+// import Table from './table';
 import { Link } from "react-router-dom";
 
 const drawerWidth = 240;
@@ -86,8 +86,6 @@ export default function HeaderAndSidebar(props) {
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(true);
-  const [title, setTitle] = React.useState(<PageTitle titleText="Продукция" />);
-  const [table, setTable] = React.useState(<Table />);
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -169,10 +167,10 @@ export default function HeaderAndSidebar(props) {
         })}
       >
         <div className={classes.drawerHeader} />
-        {title}
-        <Box mt={3}>
+        <PageTitle titleText={props.titleText} />
+        {/* <Box mt={3}>
           {table}
-        </Box>
+        </Box> */}
       </main>
     </div>
   );
