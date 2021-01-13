@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
-} from "react-router-dom";
+  Link,
+} from 'react-router-dom';
 // import HeaderAndSidebar from './components/header-and-sidebar';
 import Products from './pages/products';
-import Warehouses from "./pages/warehouses";
+import Warehouses from './pages/warehouses';
 
 function App() {
   return (
